@@ -2,43 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Register</title>
+  <title>Create Account</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  >
 </head>
 <body>
 
 <div class="auth-container">
 
-  <h2>Register</h2>
+  <div class="auth-card">
 
-  <form id="registerForm">
+    <div class="logo">
+      <i class="fa-regular fa-clock"></i>
+    </div>
 
-    <input
-      type="text"
-      id="name"
-      placeholder="Name"
-      required
-    >
+    <h2>Create Account</h2>
 
-    <input
-      type="email"
-      id="email"
-      placeholder="Email"
-      required
-    >
+    <p class="subtitle">
+      Start tracking your work hours, projects, and productivity today.
+    </p>
 
-    <input
-      type="password"
-      id="password"
-      placeholder="Password"
-      required
-    >
+    <div class="features">
 
-    <button type="submit">
-      Register
-    </button>
+      <div class="feature">
+        <i class="fa-solid fa-check"></i>
+        <span>Track daily work hours</span>
+      </div>
 
-  </form>
+      <div class="feature">
+        <i class="fa-solid fa-check"></i>
+        <span>Manage multiple projects</span>
+      </div>
+
+      <div class="feature">
+        <i class="fa-solid fa-check"></i>
+        <span>View productivity reports</span>
+      </div>
+
+    </div>
+
+    <form id="registerForm">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Full Name"
+        required
+      >
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Email Address"
+        required
+      >
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        required
+      >
+
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm Password"
+        required
+      >
+
+      <button type="submit">
+        Create Account
+      </button>
+
+    </form>
+
+    <p class="bottom-text">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
+
+  </div>
 
 </div>
 

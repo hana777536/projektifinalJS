@@ -6,9 +6,9 @@ form.addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  const response = await fetch(
-    `http://localhost:3000/users?email=${email}&password=${password}`
-  );
+ const response = await fetch(
+  `http://localhost:4002/users?email=${email}&password=${password}`
+);
 
   const users = await response.json();
 

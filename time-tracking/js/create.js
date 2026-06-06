@@ -13,8 +13,8 @@ document
       hours: document.getElementById("hours").value
     };
 
-    await fetch(
-      "http://localhost:3000/entries",
+   await fetch(
+  "http://localhost:4002/entries",
       {
         method: "POST",
         headers: {

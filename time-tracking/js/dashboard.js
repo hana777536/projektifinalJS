@@ -2,13 +2,17 @@ const user = JSON.parse(
   localStorage.getItem("currentUser")
 );
 
+if (!user) {
+  window.location.href = "login.html";
+}
+
 document.getElementById("username").textContent =
   user.name;
 
 async function loadEntries() {
 
   const response = await fetch(
-    "http://localhost:3000/entries"
+    `http://localhost:4002/entries/${id}`
   );
 
   const entries = await response.json();
@@ -29,7 +33,7 @@ async function loadEntries() {
 
         <td>
 
-          <a href="edit-entry.html?id=${entry.id}">
+        <a href="editEntry.html?id=${entry.id}">
             Edit
           </a>
 
@@ -46,7 +50,7 @@ async function loadEntries() {
 async function deleteEntry(id) {
 
   await fetch(
-    `http://localhost:3000/entries/${id}`,
+    `http://localhost:4002/entries/${id}`,
     {
       method: "DELETE"
     }

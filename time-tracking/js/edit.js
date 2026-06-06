@@ -8,7 +8,7 @@ const id = params.get("id");
 async function loadEntry() {
 
   const response = await fetch(
-    `http://localhost:3000/entries/${id}`
+    `http://localhost:4002/entries/${id}`
   );
 
   const entry = await response.json();
